@@ -1,0 +1,40 @@
+from javax.swing import JButton, JFrame, KeyStroke, AbstractAction, JComponent
+import sys
+
+global running
+running = True
+class StopAction(AbstractAction):
+    def actionPerformed(self, event):
+        global running
+        print("Yêu cầu dừng tool nhận được!")
+        running = False
+        
+        frame.dispose()
+        sys.exit()
+steps = [
+    "1772079243300.png",
+    "1772079812353.png", 
+    "1772077946550.png", 
+    "1772077975257.png", 
+    "1772077990603.png", 
+    "1772079271430.png", 
+    "1772079291412.png",
+    "1772083848308.png"
+]
+
+def run_auto_with_timeout():
+    while True:
+        for img in steps:
+            print("Dang quet anh: " + img)
+            found = exists(Pattern(img).similar(0.9), 3)
+            if found:
+                click(found)
+                print(" pmg " + img)
+                mouseMove(Location(10, 10)) 
+                wait(1.3)
+            else:
+                print("Khong thay anh, dang bo qua: " + img)
+                continue
+        print("===end ===")
+        
+run_auto_with_timeout()
