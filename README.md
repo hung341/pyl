@@ -36,3 +36,5 @@ node --version
 ifconfig wlan0 | grep inet
 
 netstat -tulnp | grep 8022
+
+netstat -tulnp | grep sshd
