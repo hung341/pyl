@@ -33,3 +33,4 @@ clang --version
 python --version
 
 node --version
+ifconfig wlan0 | grep inet
