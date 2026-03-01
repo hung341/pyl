@@ -34,3 +34,5 @@ python --version
 
 node --version
 ifconfig wlan0 | grep inet
+
+netstat -tulnp | grep 8022
