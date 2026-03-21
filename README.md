@@ -38,3 +38,5 @@ ifconfig wlan0 | grep inet
 netstat -tulnp | grep 8022
 
 netstat -tulnp | grep sshd
+
+https://gamesource-smbb.forestgame.me/sanwan9.html?sdkType=sanwan9
